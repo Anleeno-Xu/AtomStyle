@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Media Player Widget with Gooey interactions</title>
+
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:300,700&amp;display=swap'>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="o-background">
+    <div class="c-player">
+        <div class="c-player__picture">
+            <div class="c-player__picture__images">
+
+                <img src="img/1.jpg">
+                <img src="img/2.jpg">            </div>
+        </div>
+
+        <div class="c-player__details">
+            <strong>Sugar</strong>
+            <span>Rakata (Offical Single)</span>        </div>
+
+        <div class="c-player__ui">
+            <div class="c-player__ui__prev">
+                <svg class="icon" viewBox="0 0 232.153 232.153">
+                    <use class="play" xlink:href="#play" x="0" y="0"/>
+                </svg>
+                <svg class="icon" viewBox="0 0 232.153 232.153">
+                    <use class="play" xlink:href="#play" x="0" y="0"/>
+                </svg>
+            </div>
+
+            <div class="o-controls">
+                <div class="c-player__ui__play">
+                    <svg class="icon" viewBox="0 0 232.153 232.153">
+                        <use class="play" xlink:href="#play" x="0" y="0"/>
+                    </svg>
+                </div>
+
+                <div class="c-player__ui__pause">
+                    <svg class="icon" viewBox="0 0 14 36">
+                        <use class="pause" xlink:href="#pause" x="0" y="0"/>
+                    </svg>
+                    <svg class="icon" viewBox="0 0 14 36">
+                        <use class="pause" xlink:href="#pause" x="0" y="0"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="c-player__ui__next">
+                <svg class="icon" viewBox="0 0 232.153 232.153">
+                    <use class="play" xlink:href="#play" x="0" y="0"/>
+                </svg>
+                <svg class="icon" viewBox="0 0 232.153 232.153">
+                    <use class="play" xlink:href="#play" x="0" y="0"/>
+                </svg>
+            </div>
+
+            <div class="c-player__ui__seek">
+                <div class="c-player__ui__seek__seeker">
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="c-player__ui__dots">
+                <div class="c-player__ui__dots__dot"></div>
+                <div class="c-player__ui__dots__dot"></div>
+                <div class="c-player__ui__dots__dot"></div>
+                <div class="c-player__ui__dots__dot"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9"
+                               result="goo"/>
+                <feBlend in="SourceGraphic" in2="goo"/>
+            </filter>
+        </defs>
+        <symbol id="play">
+            <path style="fill-rule:evenodd;clip-rule:evenodd;"
+                  d="M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z"/>
+        </symbol>
+        <symbol id="pause">
+            <rect x="0" width="13" height="36" rx="2"></rect>
+        </symbol>
+    </svg>
+</div>
+
+<script src='js/TweenMax.min.js'></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

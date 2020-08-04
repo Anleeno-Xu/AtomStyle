@@ -1,0 +1,152 @@
+<div class="tile">
+  <img src="images/1.jpg" />
+  <div class="text">
+    <h1>文章标题</h1>
+    <h2 class="animate-text">文章子标题</h2>
+    <p class="animate-text">文章的描述信息</p>
+  </div>
+</div>
+<div class="message">
+
+  <img src="img/b/duigou.png" width="24" height="24" />Text content
+
+</div>
+<style media="screen">
+
+  .message {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .message img {
+    vertical-align: top;
+  }
+</style>
+
+
+<body>
+  <section class="content">
+    <h1>
+      <a href="https://github.com/kingdido999/zooming">Zooming</a>
+    </h1>
+
+    <p>
+      人们常说，心中有梦，不怕天涯路远，眼里有情，何惧秋风寒呢！常常觉得，我是一个爱做梦的女子，时刻在做着虚幻的梦，不肯醒来。当时光偷换了年华，光阴在疯长，一切却如同昨日云烟，转瞬即逝，刹那的一念起，缘起缘灭，转身的一瞬间，便是沧海桑田，那些青春年少的时光曾经飘荡在云端上的梦，与我隔着那样遥远的距离。
+    </p>
+
+    <h2>Original image</h2>
+    <img src="img/horizontal.jpg" data-action="zoom" style="cursor: -webkit-zoom-in;">
+
+    <p>
+      蓦然回首这半生走过的足迹，层层叠叠于时光的转角处，虽已模糊不清，却依旧感慨万千。角落里的花，悄然绽放，无需观众，也同样精彩。一直认为，一个真正内心富有的人，不需要太张扬的个性，看重浮华名利的背后，鲜花和掌声再多么热情，也和价值无关。
+    </p>
+    <p>时间可以改变一切，比如年轮，容貌，却无法改变一个人思乡情结。离别故乡多年，漂泊在外的脚步疲惫不堪，乡愁也日益浓郁。时常独自站在深夜里，举目眺望深邃的夜空，遥望故乡的方向，一幕幕的往事总会浮现在眼前。故乡的一草一木，一屋一舍，亲人们的笑脸和嘱托，儿时的时光总能勾起深深的回忆。</p>
+
+    <h2>Thumbnails only</h2>
+    <img src="img/vertical_thumbnail.jpg" data-action="zoom" style="cursor: -webkit-zoom-in;">
+    <img src="img/bento_thumbnail.jpg" data-action="zoom" style="cursor: -webkit-zoom-in;">
+
+    <h2>Thumbnails with data-original</h2>
+    <img src="img/vertical_thumbnail.jpg" data-action="zoom" data-original="img/vertical_original.jpg" style="cursor: -webkit-zoom-in;">
+    <img src="img/bento_thumbnail.jpg" data-action="zoom" data-original="img/bento_original.jpg" style="cursor: -webkit-zoom-in;">
+
+    <p>
+      随着年轮的增长，岁月的叠加，我被时光无情的隔在了这头。如今，童年的玩伴早已长大，昔日嬉戏玩耍的画面早已被光阴无情的掩埋，成了名副其实的沙漏。
+    </p>
+    <p>记得上次回故乡的时候，路上遇到了邻里的大叔一下子愣住了。以前一口气能扛几十个麻袋粮食都面不改色的大叔，硬朗的身板，如今已经驼背了，走路蹒跚，满脸皱纹，鬓角斑白，面对面的时候我们似乎都愣在原地，一时间名字在嘴边却说不出来了。迟疑了片刻才缓过神来，热情的打起了招呼。大叔憨厚的笑声依旧爽朗，拉住我的手亲切的问候着，眼神里却带着些许的生疏和感动。</p>
+  </section>
+</body>
+
+<style media="screen">
+  body {
+    background: #494A5F;
+    color: #D5D6E2;
+    font-weight: 500;
+    font-size: 1.05em;
+    font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  }
+
+  .wrap {
+    margin: 50px auto 60px auto;
+    width: 100%;
+    display: flex;
+    align-items: space-around;
+    max-width: 1200px;
+  }
+
+  .tile {
+    width: 380px;
+    height: 380px;
+    margin: 10px;
+    background-color: #99aeff;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
+    overflow: hidden;
+    color: white;
+    font-family: 'Microsoft YaHei', sans-serif;
+  }
+
+  .tile img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.4s ease-out;
+  }
+
+  .tile .text {
+    z-index: 99;
+    position: absolute;
+    padding: 30px;
+    height: calc(100% - 60px);
+  }
+
+  .tile h1 {
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .tile h2 {
+    font-weight: 100;
+    margin: 20px 0 0 0;
+    font-style: italic;
+    transform: translateX(200px);
+  }
+
+  .tile p {
+    font-weight: 300;
+    margin: 20px 0 0 0;
+    line-height: 25px;
+    transform: translateX(-200px);
+    transition-delay: 0.2s;
+  }
+
+  .animate-text {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .tile:hover {
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+    transform: scale(1.05);
+  }
+
+  .tile:hover img {
+    opacity: 0.2;
+  }
+
+  .tile:hover .animate-text {
+    transform: translateX(0);
+    opacity: 1;
+  }
+</style>

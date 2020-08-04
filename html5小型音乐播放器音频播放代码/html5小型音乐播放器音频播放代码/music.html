@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <base href="https://www.anleenoxu.top/usr/uploads/player/">
+  <link rel="icon" href="https://www.anleenoxu.top/usr/uploads/images/siteicon.png" type="image/x-icon" />
+  <link href="https://fonts.font.im/css?family=Lobster+Two" rel="stylesheet">
+  <title>耳朵怀孕 - Anleeno - 九月露湿 待君之前</title>
+  <!--布局样式-->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1314086_pe1fb45euf8.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="app-parent">
+    <div class="to-home" style="position: absolute;top: 30px;left: 30px;z-index: 4; ">
+      <a href="https://www.anleenoxu.top" target="_self" style="color: #58666e;text-decoration: none;font-size: 1.4em;"
+        onmouseover="this.style.color='#2c3e50'" onmouseout="this.style.color='#58666e'"><i
+          class="iconfont icon-zhuye" style="font-size: 20px;">Home</i></a>
+    </div>
+    <div class="title-tips">
+      <p>
+        A mini music player with fresh style.
+      </p>
+    </div>
+    <div id="app-cover">
+      <div id="bg-artwork"></div>
+      <div id="bg-layer"></div>
+      <div id="player">
+        <div id="player-track">
+          <div id="album-name"></div>
+          <div id="track-name"></div>
+          <div id="track-time">
+            <div id="current-time"></div>
+            <div id="track-length"></div>
+          </div>
+          <div id="s-area">
+            <div id="ins-time"></div>
+            <div id="s-hover"></div>
+            <div id="seek-bar"></div>
+          </div>
+        </div>
+        <div id="player-content">
+          <div id="album-art">
+            <img src="cover/01_梦不落雨林-张艺兴.jpg" class="active" id="_1">
+            <img src="cover/02_Fermata_少女时代-OhGG.jpg" id="_2">
+            <img src="cover/03_TalkTalk_少女时代.jpg" id="_3">
+            <img src="cover/04_OnlyU_少女时代-泰蒂徐.jpg" id="_4">
+            <img src="cover/05_RescueMe_太妍.jpg" id="_5">
+            <img src="cover/06_太妍_VOICE_4.jpg" id="_6">
+            <img src="cover/07_its_you-SuperJunior.jpg" id="_7">
+            <img src="cover/08_BabySteps_少女时代-泰蒂徐.jpg" id="_8">
+            <img src="cover/09_一个人_张艺兴.jpg" id="_9">
+            <img src="cover/10_Promise_少女时代.jpg" id="_10">
+            <img src="cover/11_妖精的尾巴FAIRY_TAIL-KyleXian.jpg" id="_11">
+            <img src="cover/12_GrowingPains_SJ_DE.jpg" id="_12">
+            <img src="cover/13_PARTY_少女时代.jpg" id="_13">
+            <img src="cover/14_RedVelvet-BadBoy.jpg" id="_14">
+            <img src="cover/15_RedVelvet-Psycho.jpg" id="_15">
+            <img src="cover/16_BLACKPINK-Really.jpg" id="_16">
+            <img src="cover/17_As_If_Its_Your_Last-BLACKPINK.jpg" id="_17">
+            <img src="cover/18_BLACKPINK-WHISTLE.jpg" id="_18">
+            <img src="cover/19_DIVINE_少女时代.jpg" id="_19">
+            <img src="cover/20_Hello_SHINee.jpg" id="_20">
+            <img src="cover/21_POP_STARS.jpg" id="_21">
+            <img src="cover/22_SteadyMe_AaronCole.jpg" id="_22">
+            <img src="cover/23_如果你向我招手-Apink.jpg" id="_23">
+            <img src="cover/24_Indestructible_少女时代.jpg" id="_24">
+            <img src="cover/25_4-Walls_fx.jpg" id="_25">
+            <img src="cover/26_泠鸢yousa_泠鸢yousa翻唱第二辑_4.jpg" id="_26">
+            <img src="cover/27_illa_illa_JUNIEL.jpg" id="_27">
+            <div id="buffer-box">缓冲…</div>
+          </div>
+          <div id="player-controls">
+            <div class="control">
+              <div class="button" id="play-previous">
+                <i class="iconfont icon-shangyishou"></i>
+              </div>
+            </div>
+            <div class="control">
+              <div class="button" id="play-pause-button">
+                <i class="iconfont icon-icon_play"></i>
+              </div>
+            </div>
+            <div class="control">
+              <div class="button" id="play-next">
+                <i class="iconfont icon-xiayishou"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tips">
+      <p>Tips: All the above music resources are authorised editions, I spent some money to buy or download<br>
+        them. ( I opened VIP in QQ music and Xiami music or purchased singles directly.) Please support your<br>
+        beloved music and the legal records. Inspired by <a target="_blank"
+          href="https://dribbble.com/shots/4240318-Made-with-InVision-Studio-Music-Player" rel="nofollow">Charles
+          Patterson. <i class="iconfont icon-lianjie"></i></a>
+        <br><br><a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow"
+          style="font-size: 14px;">鄂ICP备20012825号-1</a>
+      </p>
+    </div>
+  </div>
+  <script src='js/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+  <!-- <script type="text/javascript">
+    $(document).ready(function () {
+      document.oncontextmenu = function () {
+        return false;
+      }
+      document.onselectstart = function () {
+        return false;
+      }
+      document.oncopy = function () {
+        return false;
+      }
+      document.onkeydown = function () {
+        //f12
+        if (window.event && window.event.keyCode == 123) {
+          event.keyCode = 0;
+          event.returnValue = false;
+          return false;
+        }
+        //ctrl+u
+        if (event.ctrlKey && window.event.keyCode == 85) {
+          return false;
+        }
+        //ctrl+shift+i
+        if ((event.ctrlKey) && (event.shiftKey) && (event.keyCode == 73)) {
+          return false;
+        }
+        // Ctrl+S
+        else if ((event.ctrlKey) && (event.keyCode == 83)) {
+          return false;
+        }
+      };
+
+    });
+  </script> -->
+
+</body>
+
+</html>

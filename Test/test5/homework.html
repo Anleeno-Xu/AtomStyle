@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="fun1()">题1：四个数字的三位组合</button>
+    <button onclick="fun2()">题2：求利润提成</button>
+    <button onclick="fun3()">题3：三个数由小到大排列</button>
+
+    <script type="text/javascript" language="javascript">
+        function fun1() {
+            var a = [1, 2, 3, 4];
+            var num = 0;
+            for (var i = 0; i < 4; i++) {
+                for (var j = 0; j < 4; j++) {
+                    for (var k = 0; k < 4; k++) {
+                        if (a[i] != a[j] && a[j] != a[k] && a[k] != a[i]) {
+                            num = a[i] * 100 + a[j] * 10 + a[k] * 1;
+                            console.log(num);
+                        }
+                    }
+                }
+            }
+        }
+
+        function fun2() {
+            var profit = prompt("请输入企业当月利润额(单位：万)：");
+            profit=parseInt(profit);
+            console.log(typeof(profit));
+            if (profit <= 10) {
+                sal = profit * 0.1;
+            } else if (profit <= 20) {
+                sal = 10 * 0.1 + (profit - 10) * 0.075;
+            } else if (profit <= 40) {
+                sal = 10 * 0.1 + 10 * 0.075 + (profit - 20) * 0.05;
+            } else if (profit <= 60) {
+                sal = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + (profit - 40) * 0.03;
+            } else if (profit <= 100) {
+                sal = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + 20 * 0.03 + (profit - 60) * 0.015;
+            } else {
+                sal = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + 20 * 0.03 + 40 * 0.015 + (profit -
+                    100) * 0.01;
+            }
+            alert("应发放奖金总数为" + sal + "万元。")
+        }
+
+        function fun3() {
+            var s = prompt("请输入三个数，用','隔开：");//获得字符串
+            var sarr=s.split(",");//转为字符串数组
+            var arr = sarr.map(Number);//转为整型数组
+            var min;
+            for(var i=0; i<arr.length; i++){
+                for(var j=i; j<arr.length;j++){
+                    if(arr[i]>arr[j]){
+                      min=arr[j];
+                      arr[j]=arr[i];
+                      arr[i]=min;
+                    }
+                }
+            }
+            alert(arr.toString());
+        }
+    </script>
+
+</body>
+
+</html>

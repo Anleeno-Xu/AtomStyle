@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    body {
+      background-color: white;
+    }
+
+    table {
+      width: 650px;
+      border-style: solid;
+      border-color: #f5f6fa;
+      border-collapse: collapse;
+
+    }
+
+    caption {
+      padding: 4px;
+      text-align: left;
+      font-size: 14px;
+      color: black;
+      font-weight: bold;
+      background-color: #f5f6fa;
+    }
+
+    tr {
+      height: 40px;
+    }
+
+    .check {
+      border-radius: 6px;
+    }
+
+    .hint {
+      color: #01a3a4;
+      font-size: 12px;
+    }
+
+    .tableleft {
+      font-size: 14px;
+      color: #576574;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="" action="index.html" method="post">
+    <table border="1px">
+      <caption>1.会员登录名和密码</caption>
+      <tr>
+        <td align="right" class="tableleft">
+          用户名：
+        </td>
+        <td>
+          <input type="text" name="" value="">
+          <span style="color:red">*</span>
+
+        </td>
+        <td>
+          <button type="button" class="check">检测用户名</button>
+          <span class="hint">5-15位，请使用英文（a-z,A-Z），数字0-9</span>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" class="tableleft">
+          密码：
+        </td>
+        <td>
+          <input type="text" name="" value="">
+          <span style="color:red">*</span>
+        </td>
+        <td>
+          <span class="hint">5-15位，请使用英文(a-z,A-Z)，数字(0-9)，注意区分大小写；<br>
+            密码不能与登录名重复；易记；难猜；
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" class="tableleft">
+          再次输入密码：
+        </td>
+        <td>
+          <input type="text" name="" value="">
+          <span style="color:red">*</span>
+
+        </td>
+        <td>
+          <span class="hint">两次输入密码必须一致</span>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
